@@ -4,6 +4,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import Link from "next/link";
+import { FaGithub, FaPaperPlane } from "react-icons/fa6";
 
 export default function Page() {
   return (
@@ -18,12 +19,12 @@ export default function Page() {
       <BlurFade delay={0.5} className="mt-20 flex flex-wrap justify-center items-center w-full">
         <Link href="/contact" className="mx-[calc(11px+2.5%)] mb-10">
           <RainbowButton className="text-nowrap">
-            Get in Contact
+            <FaPaperPlane className="mr-3" /> Get in Contact
           </RainbowButton>
         </Link>
         <Link href="https://github.com/FelBenini" target="_blank" className="mx-[calc(12px+2.5%)] mb-10">
-          <ShimmerButton className="text-[white] px-[3.4rem]">
-            <p className="text-[white]">Check out my GitHub!</p>
+          <ShimmerButton className="text-[white] px-[2.4rem]">
+            <p className="text-[white] flex items-center"><FaGithub size="1.2rem" className="mr-3 text-md" /> Check out my GitHub!</p>
           </ShimmerButton>
         </Link>
       </BlurFade>
