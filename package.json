@@ -11,7 +11,7 @@
     "start:vinext": "vinext start",
     "dev:vinext": "vite dev --port 3001",
     "deploy:vinext": "vinext-cloudflare deploy --warm-cache",
-    "deploy:response-store": "cf deploy --prebuilt --mode production --worker felipe-benini-xyz-response-store"
+    "deploy:response-store": "cf deploy --prebuilt --mode production --worker benini-response-store"
   },
   "dependencies": {
     "@cloudflare/workers-response-store": "^1.1.3",
