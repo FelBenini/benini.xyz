@@ -1,33 +1,64 @@
-import { MorphingText } from "@/components/ui/morphing-text";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { BlurFade } from "@/components/ui/blur-fade";
-import { RainbowButton } from "@/components/ui/rainbow-button";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import Link from "next/link";
-import { FaGithub, FaPaperPlane } from "react-icons/fa6";
+import { projects } from "@/lib/projects";
 
 export default function Page() {
+  const featured = projects.filter((p) => p.featured).slice(0, 4);
+
   return (
-    <AuroraBackground>
-      <BlurFade delay={0.05}>
-        <h3 className="font-medium text-6 popin">Hey there! I am</h3>
-      </BlurFade>
-      <BlurFade delay={0.25}>
-        <h1 className="font-bold text-[38pt] md:text-[56px] lg:text-[6rem] text-center popin">Felipe Benini</h1>
-      </BlurFade>
-      <MorphingText texts={["fullstack", "backend", "frontend", "devops"]} className="text-[64px] popin text-center mx-auto" />
-      <BlurFade delay={0.5} className="mt-20 flex flex-wrap justify-center items-center w-full">
-        <Link href="/contact" className="mx-[calc(11px+2.5%)] mb-10">
-          <RainbowButton className="text-nowrap">
-            <FaPaperPlane className="mr-3" /> Get in Contact
-          </RainbowButton>
-        </Link>
-        <Link href="https://github.com/FelBenini" target="_blank" className="mx-[calc(12px+2.5%)] mb-10">
-          <ShimmerButton className="text-[white] px-[2.4rem]">
-            <p className="text-[white] flex items-center"><FaGithub size="1.2rem" className="mr-3 text-md" /> Check out my GitHub!</p>
-          </ShimmerButton>
-        </Link>
-      </BlurFade>
-    </AuroraBackground>
+    <main>
+      <section className="shell editorial-row hero">
+        <div className="hero-meta">
+          <p className="eyebrow">© 2026</p>
+          <p className="text-sm text-muted-foreground mt-1">São Paulo / BR</p>
+        </div>
+        <div className="hero-content">
+          <h1>Building things on the web and exploring graphics programming.</h1>
+          <p>Fullstack developer with a focus on systems programming and rendering engines.</p>
+        </div>
+      </section>
+
+      <section className="shell editorial-row">
+        <div>
+          <p className="eyebrow">Currently</p>
+        </div>
+        <div className="space-y-2">
+          <p className="text-lg">Student at 42 São Paulo</p>
+          <p className="text-muted-foreground">Building graphics engines and infrastructure tools</p>
+        </div>
+      </section>
+
+      <section className="shell editorial-row">
+        <div>
+          <p className="eyebrow">Selected Work</p>
+        </div>
+        <div className="space-y-6">
+          {featured.map((project) => (
+            <div key={project.name} className="group">
+              <Link
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-medium hover:text-muted-foreground transition-colors"
+              >
+                {project.name}
+              </Link>
+              <p className="text-sm text-muted-foreground mt-1 max-w-xl">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {project.languages.slice(0, 3).map((lang) => (
+                  <span key={lang} className="text-xs font-mono text-muted-foreground">
+                    {lang}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div className="pt-4">
+            <Link href="/projects" className="text-sm hover:text-muted-foreground transition-colors">
+              View all projects →
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -1,0 +1,5 @@
+-I/sgoinfre/fbenini-/benini.xyz/node_modules/@img/sharp-libvips-linux-x64/lib/glib-2.0/include
+-I/sgoinfre/fbenini-/benini.xyz/node_modules/@img/sharp-libvips-linuxmusl-x64/lib/glib-2.0/include
+-I/sgoinfre/fbenini-/benini.xyz/node_modules/harfbuzzjs
+-I/sgoinfre/fbenini-/benini.xyz/node_modules/sharp/src
+-I/sgoinfre/fbenini-/benini.xyz/node_modules/yoga-layout/src
