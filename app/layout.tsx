@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${mono.variable} ${sans.variable}`}>
-      <body>
+      <body className="transition-colors">
         <Header />
         {children}
       </body>

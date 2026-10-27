@@ -11,6 +11,7 @@ export type Project = {
   learned: string[];
   featured?: boolean;
   collaborators?: { name: string; url: string }[];
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -31,6 +32,7 @@ export const projects: Project[] = [
       "Performance optimization for real-time rendering",
     ],
     featured: true,
+    image: "/images/projects/fdf.gif",
   },
   {
     name: "SampaLX",
@@ -54,7 +56,7 @@ export const projects: Project[] = [
     name: "miniCycles",
     description: "Physically-based GPU path tracer in C + OpenGL Compute Shaders. Implements Monte Carlo light transport, BVH acceleration, PBR materials, and depth of field.",
     url: "https://github.com/FelBenini/miniCycles",
-    languages: ["C", "C++", "GLSL"],
+    languages: ["C", "Makefile", "GLSL"],
     stars: 7,
     forks: 1,
     category: "graphics",
@@ -67,6 +69,7 @@ export const projects: Project[] = [
       "Physically-based materials: metallic-roughness, dielectrics, IOR",
     ],
     featured: true,
+    image: "/images/projects/minicycles.png",
   },
   {
     name: "miniRT",
@@ -86,6 +89,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     collaborators: [{ name: "jode-cas", url: "https://github.com/jode-cas" }],
+    image: "/images/projects/minirt.png"
   },
   {
     name: "vulkan-rt",
@@ -156,91 +160,6 @@ export const projects: Project[] = [
       "Dynamic schema design for CMS content types",
       "JWT authentication and session management",
       "Multi-database adapter patterns",
-    ],
-  },
-  {
-    name: "bsh",
-    description: "A POSIX-compatible shell implementation in C. Handles parsing, AST construction, builtins, pipes, redirections, environment variables, and job control.",
-    url: "https://github.com/FelBenini/bsh",
-    languages: ["C"],
-    stars: 0,
-    forks: 0,
-    category: "systems",
-    about:
-      "From-scratch shell that implements the full POSIX spec: tokenizer, parser, AST-based execution, pipes, redirections, globbing, signal handling, and job control with foreground/background process management.",
-    learned: [
-      "Shell parsing and AST construction",
-      "Process management: fork, exec, wait, signals",
-      "Pipe and file descriptor manipulation",
-      "POSIX compliance and edge cases",
-    ],
-  },
-  {
-    name: "push_swap",
-    description: "Sorting engine using two stacks and a restricted instruction set. Implements the Turk algorithm for near-optimal sort operations.",
-    url: "https://github.com/FelBenini/push_swap",
-    languages: ["C"],
-    stars: 0,
-    forks: 0,
-    category: "systems",
-    about:
-      "The program receives a list of integers and must sort them using only two stacks and 10 operations (swap, push, rotate, reverse rotate). Uses the Turk algorithm — a chunk-based approach that achieves near-optimal move counts.",
-    learned: [
-      "Advanced sorting algorithms and complexity analysis",
-      "Stack-based data structures",
-      "Algorithm optimization and benchmarking",
-      "Chunk-based sorting strategies",
-    ],
-  },
-  {
-    name: "philosophers",
-    description: "Classic dining philosophers concurrency problem solved in C with threads, mutexes, and precise meal timing simulation.",
-    url: "https://github.com/FelBenini/philosophers",
-    languages: ["C"],
-    stars: 0,
-    forks: 0,
-    category: "systems",
-    about:
-      "Each philosopher thread alternates between eating, sleeping, and thinking. Mutexes protect fork access, and a central monitor thread checks for starvation. Handles edge cases like even/odd philosopher counts and death-by-starvation detection.",
-    learned: [
-      "Thread synchronization with mutexes",
-      "Deadlock prevention strategies",
-      "Concurrent programming patterns",
-      "Real-time simulation and timing precision",
-    ],
-  },
-  {
-    name: "pipex",
-    description: "Recreation of bash pipe utilities. Chains commands with pipes, handles file descriptors and redirections — all from scratch in C.",
-    url: "https://github.com/FelBenini/pipex",
-    languages: ["C"],
-    stars: 1,
-    forks: 0,
-    category: "systems",
-    about:
-      "Implements the `cmd1 | cmd2 | cmd3` pipeline mechanism. Creates child processes with fork, connects them via pipe(), duplicates file descriptors, and resolves command paths from PATH. Handles heredocs and multiple pipe chains.",
-    learned: [
-      "Unix process model: fork, exec, pipe",
-      "File descriptor manipulation with dup2",
-      "Environment variable resolution",
-      "Unix signal handling",
-    ],
-  },
-  {
-    name: "better_libft",
-    description: "Comprehensive C library bundling libft, get_next_line, ft_printf, and bonus linked-list utilities into a single include.",
-    url: "https://github.com/FelBenini/better_libft",
-    languages: ["C"],
-    stars: 0,
-    forks: 0,
-    category: "tools",
-    about:
-      "An extended standard library in C that reimplements libc functions (ft_strlen, ft_strjoin, ft_split, etc.), adds printf formatting, file reading with get_next_line, and linked-list utilities — all compiled into a single static library.",
-    learned: [
-      "C standard library internals",
-      "Variadic functions and format string parsing",
-      "Static library design and Makefile architecture",
-      "Memory management and leak prevention",
     ],
   },
   {
