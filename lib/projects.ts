@@ -31,7 +31,6 @@ export const projects: Project[] = [
       "Image processing and pixel manipulation with MLX",
       "Performance optimization for real-time rendering",
     ],
-    featured: true,
     image: "/images/projects/fdf.gif",
   },
   {
@@ -50,7 +49,6 @@ export const projects: Project[] = [
       "Cross-platform build systems (Linux, macOS, WASM)",
       "API compatibility layers and drop-in library design",
     ],
-    featured: true,
   },
   {
     name: "miniCycles",
@@ -68,49 +66,11 @@ export const projects: Project[] = [
       "BVH and TLAS acceleration structures on the GPU",
       "Physically-based materials: metallic-roughness, dielectrics, IOR",
     ],
-    featured: true,
     image: "/images/projects/minicycles.png",
   },
   {
-    name: "miniRT",
-    description: "Ray tracing renderer in C with MiniLibX. Renders spheres, planes, cylinders, OBJ meshes, textures, specular reflections, and multi-spot lighting.",
-    url: "https://github.com/blam-derr/miniRT",
-    languages: ["C"],
-    stars: 0,
-    forks: 0,
-    category: "graphics",
-    about:
-      "A duo project with jode-cas. Implements ray-object intersections via analytical geometry (Moller-Trumbore for triangles), Lambertian diffuse lighting, recursive specular reflections, OBJ mesh parsing with BVH acceleration, and texture mapping. Strict .rt scene file parser.",
-    learned: [
-      "Ray tracing fundamentals: ray generation, intersection, shading",
-      "Analytical geometry and vector math",
-      "Recursive reflection and specular highlights",
-      "OBJ mesh parsing and BVH acceleration structures",
-    ],
-    featured: true,
-    collaborators: [{ name: "jode-cas", url: "https://github.com/jode-cas" }],
-    image: "/images/projects/minirt.png"
-  },
-  {
-    name: "vulkan-rt",
-    description: "Ray tracing engine built with Vulkan. Implements the full Vulkan graphics pipeline with ray tracing extensions.",
-    url: "https://github.com/FelBenini/vulkan-rt",
-    languages: ["C++", "C", "GLSL"],
-    stars: 0,
-    forks: 0,
-    category: "graphics",
-    about:
-      "A from-scratch Vulkan ray tracing implementation exploring the modern Vulkan 1.3 API. Covers device setup, swapchain management, shader compilation to SPIR-V, and the ray tracing pipeline with BLAS/TLAS.",
-    learned: [
-      "Vulkan 1.3 API and ray tracing pipeline",
-      "SPIR-V shader compilation",
-      "Synchronization primitives and memory barriers",
-      "Low-level GPU programming without abstraction layers",
-    ],
-  },
-  {
     name: "benixploy",
-    description: "AI-agentic PaaS that turns a bare VPS into a self-hosted app platform. Guided by a conversational AI agent for zero-terminal deployments.",
+    description: "PaaS that turns a bare VPS into a self-hosted app platform. Server monitoring and apps deployment.",
     url: "https://github.com/FelBenini/benixploy",
     homepage: "",
     languages: ["Go", "TypeScript", "Svelte", "Shell", "Docker"],
@@ -125,13 +85,32 @@ export const projects: Project[] = [
       "AI agent tool-calling orchestration",
       "Infrastructure-as-code and container orchestration",
     ],
-    featured: true,
+    image: "/images/projects/benixploy.png"
+  },
+  {
+    name: "miniRT",
+    description: "Ray tracing renderer in C with MiniLibX. Renders spheres, planes, cylinders, OBJ meshes, textures, specular reflections, and multi-spot lighting.",
+    url: "https://github.com/blam-derr/miniRT",
+    languages: ["C"],
+    stars: 0,
+    forks: 0,
+    category: "graphics",
+    about:
+      "A duo project. Implements ray-object intersections via analytical geometry (Moller-Trumbore for triangles), Lambertian diffuse lighting, recursive specular reflections, OBJ mesh parsing with BVH acceleration, and texture mapping. Strict .rt scene file parser.",
+    learned: [
+      "Ray tracing fundamentals: ray generation, intersection, shading",
+      "Analytical geometry and vector math",
+      "Recursive reflection and specular highlights",
+      "OBJ mesh parsing and BVH acceleration structures",
+    ],
+    collaborators: [{ name: "Jovane aka Cybervanin", url: "https://github.com/cybervanin" }],
+    image: "/images/projects/minirt.png"
   },
   {
     name: "BeniRender",
     description: "Scalable Blender render farm on AWS. Provisions EC2 workers with OpenTofu, configures them with Ansible, and orchestrates distributed frame rendering via Python.",
     url: "https://github.com/FelBenini/BeniRender",
-    languages: ["Python", "HCL", "Ansible"],
+    languages: ["Python", "Terraform", "OpenTofu", "Ansible"],
     stars: 0,
     forks: 0,
     category: "devops",
@@ -161,6 +140,7 @@ export const projects: Project[] = [
       "JWT authentication and session management",
       "Multi-database adapter patterns",
     ],
+    image: "/images/projects/torta-cms.png"
   },
   {
     name: "img_to_fdf",
@@ -178,6 +158,7 @@ export const projects: Project[] = [
       "Heightmap generation from 2D data",
       "CLI tool design and argument parsing",
     ],
+    image: "/images/projects/img_to_fdf.png"
   },
   {
     name: "ft_printf",
